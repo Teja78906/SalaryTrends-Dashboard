@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Engineer Salaries</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+            font-size: 16px;
+            padding: 10px;
+            border: 2px solid #007bff;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="file"]:hover {
+            background-color: #0056b3;
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #f9f9f9;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        th:hover {
+            background-color: #0056b3;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        
+        tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>ML Engineer Salaries (2020 - 2024)</h2>
+
+    
+    <div class="container">
+       
+        <input type="file" id="csvFileInput" accept=".csv" onchange="handleFiles(this.files)">
+        
+       
+        <table id="salaryTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Year</th>
+                    <th onclick="sortTable(1)">Number of Jobs</th>
+                    <th onclick="sortTable(2)">Average Salary (USD)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamic content will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        © 2024 Salary Data Viewer
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
